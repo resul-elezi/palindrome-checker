@@ -1,6 +1,11 @@
 const textInput = document.getElementById("text-input");
+const checkBtn = document.getElementById("check-btn");
 
+function checkInput() {
+    if(textInput.value === "") {
+        alert('Please input a value');
+    return;
+    }
+};
 
-if(textInput == " ") {
-    alert("Please input a value");
-}
+checkBtn.onclick = checkInput;
