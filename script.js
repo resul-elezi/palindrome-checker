@@ -1,6 +1,7 @@
 const textInput = document.getElementById("text-input");
 const checkBtn = document.getElementById("check-btn");
 const resultEl = document.getElementById("result");
+const resultsDiv = document.querySelector(".results-div");
 
 function isPalindrome(str) {
     const cleaned = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
@@ -41,8 +42,8 @@ function checkInput() {
         resultEl.innerHTML = `${inputValue} is not a palindrome`;
     }
 
-    resultEl.classList.remove('hidden');
-    resultEl.replaceChildren();
+    resultsDiv.classList.remove('hidden');
+    resultsDiv.replaceChildren();
 };
 
 checkBtn.onclick = checkInput;
