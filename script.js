@@ -1,7 +1,6 @@
 const textInput = document.getElementById("text-input");
 const checkBtn = document.getElementById("check-btn");
 const resultEl = document.getElementById("result");
-const resultsDiv = document.querySelector(".results-div");
 
 function isPalindrome(str) {
     const cleaned = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
@@ -16,7 +15,7 @@ function checkInput() {
         alert('Please input a value');
         return;
     }
-    
+    resultEl.replaceChildren();
     const specificPalindromes = {
         "A": "A is a palindrome",
         "eye": "eye is a palindrome",
@@ -32,7 +31,7 @@ function checkInput() {
         "0_0 (: /-\\ :) 0-0": "0_0 (: /-\\ :) 0-0 is a palindrome",
         "five|\\_/|four": "five|\\_/|four is not a palindrome"
     };
-    resultsDiv.replaceChildren();
+    
 
     if (specificPalindromes[inputValue] !== undefined) {
         resultEl.innerHTML = specificPalindromes[inputValue];
@@ -45,11 +44,10 @@ function checkInput() {
         resultEl.innerHTML = `${inputValue} is not a palindrome`;
         
     }
-    resultsDiv.classList.remove('hidden');
+    resultEl.classList.remove('hidden');
     
 };
 
 checkBtn.onclick = checkInput;
 
-// resultsDiv.replaceChildren();
 
