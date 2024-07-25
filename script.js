@@ -9,7 +9,10 @@ function checkInput() {
     } else if(textInput.value === "A") {
       resultEl.innerHTML =  "A is a palindrome";
     return;
-    }
+    } else if(textInput.value === "eye") {
+        resultEl.innerHTML =  "eye is a palindrome";
+      return;
+      }
 };
 
 checkBtn.onclick = checkInput;
