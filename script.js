@@ -40,6 +40,9 @@ function checkInput() {
     } else {
         resultEl.innerHTML = `${inputValue} is not a palindrome`;
     }
-}
+    resultEl.replaceChildren();
+
+    resultEl.classList.remove('hidden');
+};
 
 checkBtn.onclick = checkInput;
