@@ -5,7 +5,6 @@ const resultEl = document.getElementById("result");
 function isPalindrome(str) {
     const cleaned = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
     return cleaned === cleaned.split('').reverse().join('');
-    
 }
 
 function checkInput() {
@@ -15,7 +14,7 @@ function checkInput() {
         alert('Please input a value');
         return;
     }
-    resultEl.replaceChildren();
+    // resultEl.replaceChildren();
     const specificPalindromes = {
         "A": "A is a palindrome",
         "eye": "eye is a palindrome",
